@@ -26,6 +26,7 @@ win_width = 650
 win_height = 500
 run = True
 player = Player('player.png', 10,10,10,100,10)
+player2 = Player('player.png', 500,10,10,100,10)
 finish = False
 background = transform.scale(image.load('bg.jpg'), (win_width, win_height))
 window = display.set_mode((win_width, win_height))
@@ -37,6 +38,8 @@ while run:
         window.blit(background,(0,0))
         player.reset()
         player.update_l()
+        player2.reset()
+        player2.update_r()
         display.update()
 
     time.delay(50)
