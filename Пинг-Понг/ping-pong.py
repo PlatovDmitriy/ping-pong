@@ -42,5 +42,5 @@ while run:
         player2.update_r()
         display.update()
 
-    time.delay(50)
+    time.delay(50) 
 
