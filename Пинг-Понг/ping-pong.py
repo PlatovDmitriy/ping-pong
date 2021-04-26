@@ -14,13 +14,13 @@ class Player(GameSprite):
         keys = key.get_pressed()
         if keys[K_w] and self.rect.y > 0:
             self.rect.y -= self.speed
-        if keys[K_s] and self.rect.x < win_width - 80:
+        if keys[K_s] and self.rect.y < win_height - 105:
             self.rect.y += self.speed
     def update_r(self):
         keys = key.get_pressed()
         if keys[K_UP] and self.rect.y > 0:
             self.rect.y -= self.speed
-        if keys[K_DOWN] and self.rect.x < win_width - 80:
+        if keys[K_DOWN] and self.rect.y < win_height - 105:
             self.rect.y += self.speed
 win_width = 650
 win_height = 500
@@ -42,5 +42,4 @@ while run:
         player2.update_r()
         display.update()
 
-    time.delay(50) 
-
+    time.delay(50)
